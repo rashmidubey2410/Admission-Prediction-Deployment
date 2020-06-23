@@ -23,7 +23,7 @@ def predict():
 
     output = round(prediction[0], 2)
     
-    return render_template('index.html', prediction_text='Probability  of Getting Admission is {}'.format(output*100))
+    return render_template('index.html', prediction_text='Probability  of Getting Admission is percentage {}'.format(output*100))
 
 
 if __name__ == "__main__":
