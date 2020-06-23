@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Graduate Admission Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background-color:powderblue;">
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Graduate Admission Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+    	
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+    		    <label for="name">Enter GRE Scores (out of 340 ):</label><br>
+                <input class="form-input" type="text" name="GRE Scores" placeholder="out of 340"><br><br>
+                <label for="name">Enter TOEFL Scores (out of 120 ):</label><br>
+                <input class="form-input" type="text" name="TOEFL Scores" placeholder="out of 120"><br><br>
+                <label for="name">Enter University Rating (out of 5):</label><br>
+                <input class="form-input" type="text" name="University Rating" placeholder="out of 5"><br><br>
+                <label for="name">Enter Statement of Purpose Strength (out of 5):</label><br>
+                <input class="form-input" type="text" name="Statement of Purpose Strength" placeholder="out of 5"><br><br>
+                <label for="name">Enter Letter of Recommendation Strength (out of 5):</label><br>
+                <input class="form-input" type="text" name="Letter of Recommendation Strength " placeholder="out of 5"><br><br>
+                <label for="name">Enter Undergraduate GPA (out of 10):</label><br>
+                <input class="form-input" type="text" name="Undergraduate GPA" placeholder="out of 10"><br><br>
+                <label for="name">Enter Research Experience (either 0 or 1):</label><br>
+                <input class="form-input" type="text" name="Research Experience" placeholder="either 0 or 1"><br><br>
+        		<input type="submit" class="my-cta-button" value="Calculate your chances">	
+        	</form>
+        	
+           <br>
+           <br>
+           <br>
+
+           
+           {{ prediction_text }} 
+            <br>
+             <br>
+              <br>    	
+        	
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/rashmidubey2410/Admission-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/rashmidubey24"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'> by Rashmi Dubey.</p>
+       </div>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
